@@ -69,12 +69,19 @@ function Menu() {
   return (
     <div className="menu">
       <h2>Our menu</h2>
+
       {pizzas.length > 0 ? (
-        <ul className="pizzas">
-          {pizzas.map((p) => (
-            <Pizza key={p.name} pizzaObj={p} />
-          ))}
-        </ul>
+        <React.Fragment>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+            libero ad aperiam, laboriosam unde quia vitae ea doloribus.
+          </p>
+          <ul className="pizzas">
+            {pizzas.map((p) => (
+              <Pizza key={p.name} pizzaObj={p} />
+            ))}
+          </ul>
+        </React.Fragment>
       ) : (
         <p>We're still working on our menu. Please come back later :)</p>
       )}
